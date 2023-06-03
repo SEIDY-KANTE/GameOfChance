@@ -11,7 +11,7 @@
 typedef enum {false, true} boolean;
 
 void draw(int luckyNumber, int round, double tableBalance,char* theRichestPerson, double balance);
-void oyunBittiCiz(int round, double tableBalance);
+void drawGameOver(int round, double tableBalance);
 
 Game new_Game(){
 	Game this;
