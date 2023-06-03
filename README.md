@@ -11,3 +11,7 @@
 - The table has no money in the beginning. The lucky number, the number of rounds, the amount of money collected on the table and the richest person will be printed on the screen.
 ## IMPORTANT: 
 - ### It is designed by emulating object-oriented and paying attention to modular programming.
+ 
+> ## Note :
+> - ### Please put the Person.txt and Numbers.txt files in the same place as the makefile, just like I did.
+> - ### Use the mingw32-make command to run the program in cmd. (Note where the program is located).
