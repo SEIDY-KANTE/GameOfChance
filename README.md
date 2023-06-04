@@ -15,3 +15,13 @@
 > ## Note :
 > - ### Please put the Person.txt and Numbers.txt files in the same place as the makefile, just like I did.
 > - ### Use the mingw32-make command to run the program in cmd. (Note where the program is located).
+
+## Folder Hierarchy:
+##### In order to easily access my files, I have created a folder hierarchy according to the required file format in this assignment:
+- ➔ In the 'include' folder: Person.h, Game.h, and File.h can be found.
+- ➔ In the 'src' folder: Person.c, Game.c, File.c, and Test.c are located.
+- ➔ In the 'lib' folder: Person.o, Game.o, and File.o can be found.
+- ➔ In the 'bin' folder: Main.exe is located.
+- ➔ 'Person.txt' file stores the information of the players for the game.
+- ➔ 'Nummbers.txt' file holds the lucky numbers.
+- And the 'makefile' is an extensionless file that facilitates running my program with Mingw
