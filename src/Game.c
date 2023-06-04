@@ -13,6 +13,18 @@ typedef enum {false, true} boolean;
 void draw(int luckyNumber, int round, double tableBalance,char* theRichestPerson, double balance);
 void drawGameOver(int round, double tableBalance);
 
+void findTheRichestPerson(const File this, const Game gameKing){
+	 gameKing->maxBalance=this->person[0]->money;
+	 char* theRichest=this->person[0]->name;
+	int i=0;
+	for(i; i<this->numberOfPerson; i++){
+		if(gameKing->maxBalance < this->person[i]->money){
+			gameKing->maxBalance=this->person[i]->money;
+			gameKing->theRichestPerson=this->person[i]->name;
+		}		
+	}
+}
+
 Game new_Game(){
 	Game this;
 	this->tableBalance=0;
@@ -53,7 +65,7 @@ void run(const Game this){
 		{			
 			if(inMyFile->person[j]->money>=1000.0){
 				inMyFile->person[j]->play(inMyFile->person[j],this,inMyFile->numbers[i]);
-				//Here Find the richest person
+				findTheRichestPerson(inMyFile,this);	
 				isGameOver=false;
 			}
 			
@@ -69,4 +81,39 @@ void run(const Game this){
 void delete_Game(const Game this){
 	if(this==NULL) return;
 	free(this);
+}
+
+
+////Display to console
+
+void draw(int luckyNumber, int round, double tableBalance ,char* theRichestPerson, double balance){
+	system("cls");
+    printf("%90s\n","############################################################");
+    printf("%32s %31s %d %20s\n","##","LUCKY NUMBER:",luckyNumber,"\t##");
+    printf("%90s\n","############################################################");
+    printf("%90s\n","############################################################");
+    printf("%32s %23s %d %15s\n","##","ROUND:",round,"\t\t\t##");
+    printf("%32s %20s %0.0lf TL %21s\n","##","TABLE BALANCE:",tableBalance,"\t##");
+    printf("%32s %32s %23s\n","##","","\t##");
+    printf("%90s\n","##--------------------------------------------------------##");
+	printf("%32s %32s %10s\n","##","THE RICHEST PERSON","\t\t\t##");
+    printf("%32s %32s %10s\n","##",theRichestPerson,"\t\t\t##");
+    printf("%32s %17s %0.0lf %27s\n","##","BALANCE:",balance,"\t##");
+    printf("%32s %32s %23s\n","##","","\t##");
+    printf("%90s\n","############################################################");
+	sleep(1);
+}
+
+void drawGameOver(int round, double tableBalance){
+	system("cls");
+	printf("%90s\n","############################################################");
+    printf("%32s %23s %d %15s\n","##","ROUND:",round,"\t\t\t##");
+    printf("%32s %20s %0.0lf TL %21s\n","##","TABLE BALANCE:",tableBalance,"\t##");
+    printf("%32s %32s %23s\n","##","","\t##");
+    printf("%90s\n","##--------------------------------------------------------##");
+	printf("%32s %32s %10s\n","##","GAME OVER","\t\t\t##");
+    printf("%32s %32s %10s\n","##","","\t\t\t##");
+    printf("%32s %32s %23s\n","##","","\t##");
+    printf("%32s %32s %23s\n","##","","\t##");
+    printf("%90s\n","############################################################");
 }
