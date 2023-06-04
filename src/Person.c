@@ -25,7 +25,21 @@ Person new_Person(char* name,double money,float depositInEachRound,int luckyNumb
 
 }
 
-void delete_Kisi(const Person this){
+void play(const Person this, const Game that, int luckyNumber){
+
+	double balance=this->money;
+	double deposit = balance*this->depositInEachRound;
+	this->money-=deposit;  
+	that->tableBalance+=deposit;
+
+	if(this->luckyNumber==luckyNumber){
+		that->tableBalance-=deposit*10;
+		this->money+=deposit*10;
+	}	
+
+}
+
+void delete_Person(const Person this){
 	if(this==NULL) return;
 	free(this);
 }
