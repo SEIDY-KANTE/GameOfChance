@@ -16,6 +16,9 @@
 > - ### Please put the Person.txt and Numbers.txt files in the same place as the makefile, just like I did.
 > - ### Use the mingw32-make command to run the program in cmd. (Note where the program is located).
 
+![ezgif com-crop](https://github.com/SEIDY-KANTE/GameOfChance/assets/82980518/74b0ab5a-b75b-4797-ae51-1c2b42fdf303)
+
+
 ## Folder Hierarchy:
 ##### In order to easily access my files, I have created a folder hierarchy according to the required file format in this assignment:
 - ➔ In the 'include' folder: Person.h, Game.h, and File.h can be found.
