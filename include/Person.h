@@ -19,7 +19,7 @@ struct PERSON{
 	
 	void(*play)(struct PERSON*,struct GAME*, int);
 	
-	void(*delete_Person)(struct KISI*);
+	void(*delete_Person)(struct PERSON*);
 	
 };
 

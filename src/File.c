@@ -70,7 +70,7 @@ void readPersonFile(const File this,const char* path){
 			depositInEachRound=atof(ratio);
 			luckyNumber=atoi(number);
 
-			this->person[index++]=new_Kisi(name, balance,depositInEachRound, luckyNumber);
+			this->person[index++]=new_Person(name, balance,depositInEachRound, luckyNumber);
 
         }
       
@@ -111,10 +111,10 @@ void delete_File(const File this){
 	free(this->numbers);
 	free(this);
 }
-int dosyaBoyutu(const char* file){
+int fileSize(const char* path){
 	FILE *file;
 
-	file=fopen(file,"r");
+	file=fopen(path,"r");
 	int numberOfLine=0;
     char *line = NULL;
     size_t len = 0;

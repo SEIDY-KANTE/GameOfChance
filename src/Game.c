@@ -101,7 +101,7 @@ void draw(int luckyNumber, int round, double tableBalance ,char* theRichestPerso
     printf("%32s %17s %0.0lf %27s\n","##","BALANCE:",balance,"\t##");
     printf("%32s %32s %23s\n","##","","\t##");
     printf("%90s\n","############################################################");
-	sleep(1);
+	//sleep(1);
 }
 
 void drawGameOver(int round, double tableBalance){
