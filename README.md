@@ -16,7 +16,8 @@
 > - ### Please put the Person.txt and Numbers.txt files in the same place as the makefile, just like I did.
 > - ### Use the mingw32-make command to run the program in cmd. (Note where the program is located).
 
-![ezgif com-crop](https://github.com/SEIDY-KANTE/GameOfChance/assets/82980518/74b0ab5a-b75b-4797-ae51-1c2b42fdf303)
+![screenshot](https://github.com/SEIDY-KANTE/GameOfChance/assets/82980518/52b6a667-4121-42e4-a85f-21e82d24c5ca)
+
 
 
 ## Folder Hierarchy:
